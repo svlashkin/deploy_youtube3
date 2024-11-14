@@ -16,7 +16,4 @@ COPY --from=build-stage /app/dist /usr/share/nginx/html
 
 COPY ./nginx/default.conf /etc/nginx/conf.d/default.conf
 
-# Start Nginx to serve the application
 CMD ["nginx", "-g", "daemon off;"]
-
-#CMD [ "npm", "run", "dev" ]
